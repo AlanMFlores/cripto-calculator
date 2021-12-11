@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/breakpoints.css">
+    <title>Crypto Calculator</title>
+</head>
+<body>
+    <main class="main">
+        <section class="crypto-calc">
+            <article class="crypto-calc__item">
+                <h3 class="crypto-calc__item--title">Diferencia de Operación</h3>
+                <div class="operation">
+                    <div class="operation__values">
+                        <form action="" class="operation__form">
+                            <div class="operation__values--columns">
+                                <div class="purchase-column">
+                                    <label for="dif-purchase-amount">Cantidad</label>
+                                    <input id="dif-purchase-amount"type="number" placeholder="Monto" autocomplete="off">
+                                    <label for="dif-purchase-price">Precio de compra</label>
+                                    <input id="dif-purchase-price"type="number" placeholder="Precio" autocomplete="off">
+                                </div>
+                                <div class="sale-column">
+                                    <label for="dif-sale-amount">Cantidad</label>
+                                    <input id="dif-sale-amount"type="number" placeholder="Monto" autocomplete="off">
+                                    <label for="dif-sale-price">Precio de venta</label>
+                                    <input id="dif-sale-price"type="number" placeholder="Precio" autocomplete="off">
+                                </div>
+                            </div>
+                            <input type="button" value="Calcular" class="calc-button" id="dif-btn">
+                        </form>
+                    </div>
+                    <div class="operation__result">
+                        <div class="partials-results">
+                            <p class="partial">Compra</p>
+                            <p class="partial-num" id="dif-partial-purchase">- -</p>
+                            <p class="partial">Venta</p>
+                            <p class="partial-num" id="dif-partial-sale">- -</p>
+                        </div>
+                        <div class="final__result">
+                            <p class="description">
+                                Diferencia de:
+                            </p>
+                            <p class="result" id="dif-result">- -</p>
+                        </div>
+                    </div>
+                </div>
+                </article>
+
+            <article class="crypto-calc__item">
+                <h3 class="crypto-calc__item--title">Porcentaje de Operación</h3>
+                <div class="operation">
+                    <div class="operation__values">
+                        <form action="" class="operation__form">
+                            <div class="operation__values--columns">
+                                <div class="purchase-column">
+                                    <label for="perc-purchase-amount">Cantidad</label>
+                                    <input id="perc-purchase-amount"type="number" placeholder="Monto" autocomplete="off">
+                                    <label for="perc-purchase-price">Precio de compra</label>
+                                    <input id="perc-purchase-price"type="number" placeholder="Precio" autocomplete="off">
+                                </div>
+                                <div class="sale-column">
+                                    <label for="perc-sale-amount">Cantidad</label>
+                                    <input id="perc-sale-amount"type="number" placeholder="Monto" autocomplete="off">
+                                    <label for="perc-sale-price">Precio de venta</label>
+                                    <input id="perc-sale-price"type="number" placeholder="Precio" autocomplete="off">
+                                </div>
+                            </div>
+                            <input type="button" value="Calcular" class="calc-button" id="perc-btn">
+                        </form>
+                    </div>
+                    <div class="operation__result">
+                        <div class="partials-results">
+                            <p class="partial">Compra</p>
+                            <p class="partial-num" id="perc-partial-purchase">- -</p>
+                            <p class="partial">Venta</p>
+                            <p class="partial-num" id="perc-partial-sale">- -</p>
+                        </div>
+                        <div class="final__result">
+                            <p class="description">
+                                Diferencia de:
+                            </p>
+                            <p class="result" id="perc-result">- -</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="crypto-calc__item">
+                <h3 class="crypto-calc__item--title">Cálculo por Porcentaje</h3>
+                <div class="operation">
+                    <div class="operation__values">
+                        <form action="" class="operation__form">
+                            <div class="operation__values--columns">
+                                <div class="purchase">
+                                    <label for="calc-perc-amount">Cantidad</label>
+                                    <input id="calc-perc-amount"type="number" placeholder="Monto" autocomplete="off">
+                                    <label for="calc-perc-price">Precio de compra</label>
+                                    <input id="calc-perc-price"type="number" placeholder="Precio" autocomplete="off">
+                                </div>
+                                <div class="percentage">
+                                    <label for="calc-perc-percentage">Porcentaje</label>
+                                    <input id="calc-perc-percentage"type="number" placeholder="Porcentaje" autocomplete="off">
+                                    <span class="perc-symbol">%</span>
+                                </div>
+                            </div>
+                            <input type="button" value="Calcular" class="calc-button" id="calc-perc-btn">
+                        </form>
+                    </div>
+                    <div class="operation__result">
+                        <div class="partials-results">
+                            <p class="partial">Compra</p>
+                            <p class="partial-num" id="calc-perc-partial-purchase">- -</p>
+                            <p class="partial">Porcentaje</p>
+                            <p class="partial-num" id="calc-perc-partial-percentage">- -</p>
+                        </div>
+                        <div class="final__result">
+                            <p class="description">
+                                Precio de Venta:
+                            </p>
+                            <p class="result" id="calc-perc-result">- -</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="crypto-calc__item">
+                <h3 class="crypto-calc__item--title">Cálculo de Stop Loss</h3>
+                <div class="operation">
+                    <div class="operation">
+                        <form action="" class="operation__form">
+                            <div class="operation__values--columns">
+                                <div class="purchase">
+                                    <label for="calc-sl-amount">Cantidad</label>
+                                    <input id="calc-sl-amount"type="number" placeholder="Monto" autocomplete="off">
+                                    <label for="calc-sl-price">Precio de compra</label>
+                                    <input id="calc-sl-price"type="number" placeholder="Precio" autocomplete="off">
+                                </div>
+                                <div class="percentage">
+                                    <label for="calc-sl-percentage">Porcentaje</label>
+                                    <input id="calc-sl-percentage"type="number" placeholder="Porcentaje" autocomplete="off">
+                                    <span class="perc-symbol">%</span>
+                                </div>
+                            </div>
+                            <input type="button" value="Calcular" class="calc-button" id="calc-sl-btn">
+                        </form>
+                    </div>
+                    <div class="operation__result">
+                        <div class="partials-results">
+                            <p class="partial">Compra</p>
+                            <p class="partial-num" id="calc-sl-partial-purchase">- -</p>
+                            <p class="partial">Porcentaje</p>
+                            <p class="partial-num" id="calc-sl-partial-percentage">- -</p>
+                        </div>
+                        <div class="final__result">
+                            <p class="description">
+                                Precio de venta:
+                            </p>
+                            <p class="result" id="calc-sl-result">- -</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+    </main>
+    <script src="js/script.js"></script>
+    <script src="js/difference.js"></script>
+    <script src="js/percentage.js"></script>
+    <script src="js/calc-percentage.js"></script>
+    <script src="js/stop-loss.js"></script>
+</body>
+</html>

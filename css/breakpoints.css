@@ -1,0 +1,66 @@
+/* ########## Breakpoints ########## 
+*
+*
+*
+*/
+
+@media (max-width: 1024px) {
+    body {
+        height: 100%;
+    }
+
+    .crypto-calc {
+        display: flex;
+        padding: 50px;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .crypto-calc__item {
+        /* min-width: 700px; */
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        display: block;
+    }
+
+    input[type='number'] {
+        width: 100%;
+    }
+
+    .crypto-calc {
+        padding: 25px;
+        margin: 0 auto;
+    }
+
+    .crypto-calc__item {
+        width: auto;
+        min-width: auto;
+        max-width: 400px;
+    }
+
+    .crypto-calc__item--title {
+        font-size: var(--fs-mob-h3-title);
+    }
+
+    .operation {
+        display: block;
+    }
+
+    .operation__values--columns {
+        display: block;
+    }
+
+    .operation__result {
+        display: block;
+        padding: 0;
+        border-left: none;
+        border-top: 1px solid var(--clr-primary-color);
+        padding-top: var(--mar-bot-titles);
+        margin-top: var(--mar-bot-titles);
+    }
+    
+    
+}

@@ -1,0 +1,209 @@
+/* ########## Styles ########## 
+*
+*
+*
+*/
+
+/* ########## Global Styles ########## */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+/* ##### Typography ##### */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* ########## Variables ########## */
+
+:root {
+    
+    /* ##### Colors ##### */
+
+    --clr-primary-color: #FF8303;
+    --clr-secondary-color: #A35709;
+    --clr-very-dark-color: #1B1A17;
+    --clr-dark-color: #21211F;
+    --clr-dark-gray-color: #343434;
+    --clr-gray-color: #707070;
+    --clr-light-gray-color: #DEDBDB;
+    --clr-light-color: #FAFAFA;
+    --clr-green-color: #1DD655;
+    --clr-red-color: #E12424;
+
+    /* ##### Typography ##### */
+    --fs-desk-h3-title: 2rem;
+    --fs-desk-copy: 1.4rem;
+    --fs-mob-h3-title: 1.8rem;
+    --fs-mob-copy: 1.4rem;
+
+    /* ##### Box Properties ##### */
+    --padding-desk-box: 30px;
+    --padding-mob-box: 35px;
+    --mar-bot-titles: 15px;
+    --mar-bot-labels: 5px;
+    --br-boxes: 10px;
+    --br-buttons: 5px;
+
+    /* ##### Animations ##### */
+    --anim-duration: 300ms;
+
+}
+
+/* ########## Body Styles ########## */
+
+body {
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--clr-very-dark-color);
+    color: var(--clr-light-color);
+}
+
+label {
+    display: block;
+    font-size: var(--fs-desk-copy);
+    font-weight: 300;
+    color: var(--clr-primary-color);
+    margin-bottom: var(--mar-bot-labels);
+}
+
+input[type='number'] {
+    min-width: 130px;
+    width: 130px;
+    height: 30px;
+    padding: 5px 8px;
+    margin-bottom: var(--mar-bot-labels);
+    background-color: var(--clr-dark-gray-color);
+    color: var(--clr-light-color);
+    font-family: 'Roboto', sans-serif;
+    border-radius: var(--br-buttons);
+    border: none;
+    text-align: right;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button  {
+    appearance: none;
+}
+
+input::placeholder {
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+}
+
+input:focus {
+    outline: 1px solid var(--clr-secondary-color);
+}
+
+
+p {
+    font-size: var(--fs-desk-copy);
+}
+
+
+
+/* ########## Main Styles ########## */
+
+/* ##### Crypto Container Styles ##### */
+
+.crypto-calc {
+    display: grid;
+    place-content: center;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    gap: 20px;
+}
+
+.crypto-calc__item {
+    min-width: 500px;
+    padding: var(--padding-desk-box);
+    background-color: var(--clr-dark-color);
+    border-radius: var(--br-boxes);
+    box-shadow: 0 0 20px 5px rgba(0,0,0,16%);
+}
+
+.crypto-calc__item--title {
+    font-size: var(--fs-desk-h3-title);
+    margin-bottom: var(--mar-bot-titles);
+}
+
+/* ##### Operation Container Styles ##### */
+
+.operation {
+    display: flex;
+    gap: 30px;
+}
+
+.operation__values--columns {
+    display: flex;
+    gap: 25px;
+}
+
+.operation__result {
+    display: grid;
+    place-content: center;
+    padding-left: 10px;
+    margin: 0 auto;
+    border-left: 1px solid var(--clr-primary-color);
+    text-align: center;
+}
+
+.partials-results {
+    display: grid;
+    margin-bottom: 20px;
+    gap: 10px;
+    grid-template: repeat(2 ,1fr) / repeat(2 ,1fr);
+}
+
+.partial {
+    color: var(--clr-gray-color);
+}
+
+.result {
+    margin-top: var(--mar-bot-labels);
+    color: var(--clr-gray-color);
+    font-weight: 600;
+}
+
+.calc-button {
+    width: 100%;
+    height: 30px;
+    margin-top: var(--mar-bot-labels);
+    background-color: var(--clr-primary-color);
+    color: var(--clr-light-color);
+    border: none;
+    border-radius: var(--br-buttons);
+    transition: var(--anim-duration);
+    cursor: pointer;
+}
+
+.calc-button:hover {
+    background-color: var(--clr-secondary-color);
+}
+
+.perc-symbol {
+    margin-left: 3px;
+    font-size: 1.2rem;
+    color: var(--clr-primary-color);
+}
+
+#calc-sl-percentage, #calc-perc-percentage {
+    width: 95%;
+}
+
+/* ##### Helpers ##### */
+
+.gain {
+    color: var(--clr-green-color);
+}
+
+.lose {
+    color: var(--clr-red-color);
+}
