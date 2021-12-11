@@ -38,7 +38,6 @@
     .crypto-calc__item {
         width: auto;
         min-width: auto;
-        max-width: 400px;
     }
 
     .crypto-calc__item--title {
@@ -61,6 +60,15 @@
         padding-top: var(--mar-bot-titles);
         margin-top: var(--mar-bot-titles);
     }
+
+    #calc-sl-percentage, #calc-perc-percentage {
+        width: 90%;
+    }
     
-    
+}
+
+@media (max-width: 400px) {
+    #calc-sl-percentage, #calc-perc-percentage {
+        width: 85%;
+    }
 }

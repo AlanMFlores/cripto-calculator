@@ -194,9 +194,6 @@ p {
     color: var(--clr-primary-color);
 }
 
-#calc-sl-percentage, #calc-perc-percentage {
-    width: 95%;
-}
 
 /* ##### Helpers ##### */
 
