@@ -72,3 +72,10 @@
         width: 85%;
     }
 }
+
+@media (min-width: 601px) and (max-width: 650px) {
+    #calc-sl-percentage, #calc-perc-percentage {
+        min-width: auto;
+        width: 85px;
+    }
+}
