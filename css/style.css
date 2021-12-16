@@ -123,6 +123,7 @@ p {
 
 .crypto-calc__item {
     min-width: 500px;
+    max-width: 540px;
     padding: var(--padding-desk-box);
     background-color: var(--clr-dark-color);
     border-radius: var(--br-boxes);

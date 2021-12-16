@@ -26,7 +26,7 @@ calcSlBtn.addEventListener('click', () => {
      const finalPerc = calcSlPercentage;
      const finalPurchase = calcSlAmount * calcSlPrice;
      // Print Partials
-    calcSlPartialPurchase.innerHTML = `${finalPurchase.toFixed(2)}USD`;
+    calcSlPartialPurchase.innerHTML = `${finalPurchase.toLocaleString('en-US')}USD`;
     calcSlPartialPercentage.innerHTML = `${finalPerc}%`;
     // Result
     const finalResult = stopLossCalculation(finalPrice, finalPerc)

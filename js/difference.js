@@ -38,11 +38,11 @@ difBtn.addEventListener('click', () => {
     const difSaleAmount = document.getElementById('dif-sale-amount').value;
     const difSalePrice = document.getElementById('dif-sale-price').value;
     // Partials
-    const finalPurchase = difPurchaseAmount * difPurchasePrice;
-    const finalSale = difSaleAmount * difSalePrice;
+    const finalPurchase = (difPurchaseAmount * difPurchasePrice);
+    const finalSale = (difSaleAmount * difSalePrice);
     // Print Partials
-    difPartialPurchase.innerHTML = `${finalPurchase.toFixed(2)}USD`;
-    difPartialSale.innerHTML = `${finalSale.toFixed(2)}USD`;
+    difPartialPurchase.innerHTML = `${finalPurchase.toLocaleString('en-US')}USD`;
+    difPartialSale.innerHTML = `${finalSale.toLocaleString('en-US')}USD`;
     // Result
     const finalResult = differenceCalculation(difPurchaseAmount, difPurchasePrice, difSaleAmount, difSalePrice);
     const finalPercentage = percentageDifferenceCalculation(difPurchaseAmount, difPurchasePrice, difSaleAmount, difSalePrice);

@@ -26,7 +26,7 @@ calcPercBtn.addEventListener('click', () => {
      const finalPerc = calcPercPercentage;
      const finalPurchase = calcPercAmount * calcPercPrice;
      // Print Partials
-    calcPercPartialPurchase.innerHTML = `${finalPurchase.toFixed(2)}USD`;
+    calcPercPartialPurchase.innerHTML = `${finalPurchase.toLocaleString('en-US')}USD`;
     calcPercPartialPercentage.innerHTML = `${finalPerc}%`;
     // Result
     const finalResult = gainPercentage(finalPrice, finalPerc)
