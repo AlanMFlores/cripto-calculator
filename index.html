@@ -12,22 +12,48 @@
     <main class="main">
         <section class="crypto-calc">
             <article class="crypto-calc__item">
+                <h3 class="crypto-calc__item--title">Conversión USDT</h3>
+                <div class="operation conversion-container">
+                    <div class="operation__values">
+                        <form action="" class="operation__form">
+                            <div class="operation__inputs">
+                                    <label for="usdt-amount">Cantidad de USDT</label>
+                                    <input id="usdt-amount"type="number" placeholder="Ej: 250 USDT" autocomplete="off">
+                                    <label for="cripto-price">Precio de Cripto</label>
+                                    <input id="cripto-price"type="number" placeholder="Ej: 48,500 BTC" autocomplete="off">
+                            </div>
+                            <input type="button" value="Calcular" class="calc-button" id="conv-btn">
+                        </form>
+                    </div>
+                    <div class="operation__result conversion-results">
+                        <div class="final__result">
+                            <p class="description">
+                                Cantidad de Criptomonedas:
+                            </p>
+                            <p class="result" id="conv-result">- -</p>
+                        </div>
+                    </div>
+                <button type="reset" id="reset-btn" class="reset"><i class="fas fa-trash-alt"></i></button>
+                </div>
+            </article>
+
+            <article class="crypto-calc__item">
                 <h3 class="crypto-calc__item--title">Diferencia de Operación</h3>
                 <div class="operation">
                     <div class="operation__values">
                         <form action="" class="operation__form">
                             <div class="operation__values--columns">
                                 <div class="purchase-column">
-                                    <label for="dif-purchase-amount">Cantidad</label>
-                                    <input id="dif-purchase-amount"type="number" placeholder="Monto" autocomplete="off">
+                                    <label for="dif-purchase-amount">Cantidad de Cripto</label>
+                                    <input id="dif-purchase-amount"type="number" placeholder="Ej: 0.025 BTC" autocomplete="off">
                                     <label for="dif-purchase-price">Precio de compra</label>
-                                    <input id="dif-purchase-price"type="number" placeholder="Precio" autocomplete="off">
+                                    <input id="dif-purchase-price"type="number" placeholder="Ej: 49,500 USDT" autocomplete="off">
                                 </div>
                                 <div class="sale-column">
-                                    <label for="dif-sale-amount">Cantidad</label>
-                                    <input id="dif-sale-amount"type="number" placeholder="Monto" autocomplete="off">
+                                    <label for="dif-sale-amount">Cantidad de Cripto</label>
+                                    <input id="dif-sale-amount"type="number" placeholder="Ej: 0.025 BTC" autocomplete="off">
                                     <label for="dif-sale-price">Precio de venta</label>
-                                    <input id="dif-sale-price"type="number" placeholder="Precio" autocomplete="off">
+                                    <input id="dif-sale-price"type="number" placeholder="Ej: 59,500 USDT" autocomplete="off">
                                 </div>
                             </div>
                             <input type="button" value="Calcular" class="calc-button" id="dif-btn">
@@ -48,45 +74,6 @@
                         </div>
                     </div>
                 </div>
-                </article>
-
-            <article class="crypto-calc__item">
-                <h3 class="crypto-calc__item--title">Porcentaje de Operación</h3>
-                <div class="operation">
-                    <div class="operation__values">
-                        <form action="" class="operation__form">
-                            <div class="operation__values--columns">
-                                <div class="purchase-column">
-                                    <label for="perc-purchase-amount">Cantidad</label>
-                                    <input id="perc-purchase-amount"type="number" placeholder="Monto" autocomplete="off">
-                                    <label for="perc-purchase-price">Precio de compra</label>
-                                    <input id="perc-purchase-price"type="number" placeholder="Precio" autocomplete="off">
-                                </div>
-                                <div class="sale-column">
-                                    <label for="perc-sale-amount">Cantidad</label>
-                                    <input id="perc-sale-amount"type="number" placeholder="Monto" autocomplete="off">
-                                    <label for="perc-sale-price">Precio de venta</label>
-                                    <input id="perc-sale-price"type="number" placeholder="Precio" autocomplete="off">
-                                </div>
-                            </div>
-                            <input type="button" value="Calcular" class="calc-button" id="perc-btn">
-                        </form>
-                    </div>
-                    <div class="operation__result">
-                        <div class="partials-results">
-                            <p class="partial">Compra</p>
-                            <p class="partial-num" id="perc-partial-purchase">- -</p>
-                            <p class="partial">Venta</p>
-                            <p class="partial-num" id="perc-partial-sale">- -</p>
-                        </div>
-                        <div class="final__result">
-                            <p class="description">
-                                Diferencia de:
-                            </p>
-                            <p class="result" id="perc-result">- -</p>
-                        </div>
-                    </div>
-                </div>
             </article>
 
             <article class="crypto-calc__item">
@@ -96,14 +83,14 @@
                         <form action="" class="operation__form">
                             <div class="operation__values--columns">
                                 <div class="purchase">
-                                    <label for="calc-perc-amount">Cantidad</label>
-                                    <input id="calc-perc-amount"type="number" placeholder="Monto" autocomplete="off">
+                                    <label for="calc-perc-amount">Cantidad de Cripto</label>
+                                    <input id="calc-perc-amount"type="number" placeholder="Ej: 0.125 ETH" autocomplete="off">
                                     <label for="calc-perc-price">Precio de compra</label>
-                                    <input id="calc-perc-price"type="number" placeholder="Precio" autocomplete="off">
+                                    <input id="calc-perc-price"type="number" placeholder="Ej: 3,890 USDT" autocomplete="off">
                                 </div>
                                 <div class="percentage">
                                     <label for="calc-perc-percentage">Porcentaje</label>
-                                    <input id="calc-perc-percentage"type="number" placeholder="Porcentaje" autocomplete="off">
+                                    <input id="calc-perc-percentage"type="number" placeholder="Ej: 3%" autocomplete="off">
                                     <span class="perc-symbol">%</span>
                                 </div>
                             </div>
@@ -134,14 +121,14 @@
                         <form action="" class="operation__form">
                             <div class="operation__values--columns">
                                 <div class="purchase">
-                                    <label for="calc-sl-amount">Cantidad</label>
-                                    <input id="calc-sl-amount"type="number" placeholder="Monto" autocomplete="off">
+                                    <label for="calc-sl-amount">Cantidad de Cripto</label>
+                                    <input id="calc-sl-amount"type="number" placeholder="Ej: 0.025 BTC" autocomplete="off">
                                     <label for="calc-sl-price">Precio de compra</label>
-                                    <input id="calc-sl-price"type="number" placeholder="Precio" autocomplete="off">
+                                    <input id="calc-sl-price"type="number" placeholder="Ej: 49,500 USDT" autocomplete="off">
                                 </div>
                                 <div class="percentage">
                                     <label for="calc-sl-percentage">Porcentaje</label>
-                                    <input id="calc-sl-percentage"type="number" placeholder="Porcentaje" autocomplete="off">
+                                    <input id="calc-sl-percentage"type="number" placeholder="Ej: 1%" autocomplete="off">
                                     <span class="perc-symbol">%</span>
                                 </div>
                             </div>
@@ -167,10 +154,11 @@
 
         </section>
     </main>
-    <script src="js/script.js"></script>
+    <script src="js/conversion.js"></script>
     <script src="js/difference.js"></script>
-    <script src="js/percentage.js"></script>
     <script src="js/calc-percentage.js"></script>
     <script src="js/stop-loss.js"></script>
+    <script src="js/reset-inputs.js"></script>
+    <script src="https://kit.fontawesome.com/549c3d58c0.js" crossorigin="anonymous"></script>
 </body>
 </html>

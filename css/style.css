@@ -194,6 +194,21 @@ p {
     color: var(--clr-primary-color);
 }
 
+/* ##### Conversion USDT ##### */
+
+.conversion-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.conversion-container input {
+    width: 100%;
+}
+
+.conversion-results {
+    margin: 0;
+}
+
 
 /* ##### Helpers ##### */
 
@@ -203,4 +218,26 @@ p {
 
 .lose {
     color: var(--clr-red-color);
+}
+
+.reset {
+    position: fixed;
+    bottom: 55px;
+    right: 50px;
+    width: 40px;
+    height: 40px;
+    margin-top: var(--mar-bot-labels);
+    margin-bottom: var(--mar-bot-titles);
+    background-color: rgba(163, 87, 9, .8);
+    color: var(--clr-light-color);
+    border: none;
+    border-radius: var(--br-buttons);
+    transition: var(--anim-duration);
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.reset:hover {
+    background-color: var(--clr-dark-gray-color);
 }
